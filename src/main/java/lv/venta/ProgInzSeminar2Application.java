@@ -53,10 +53,10 @@ public class ProgInzSeminar2Application {
 				courseRepo.save(c3);
 				
 				
-				gradeRepo.save(new Grade(4, c1, s1));//Janis nopelnīja 4 DataStr
+				gradeRepo.save(new Grade(1, c1, s1));//Janis nopelnīja 4 DataStr
 				gradeRepo.save(new Grade(7, c2, s1));//Janis nopelnīja 7 DB
 				gradeRepo.save(new Grade(10, c3, s1));//Janis nopelnīja 10 ProgInz
-				gradeRepo.save(new Grade(5, c1, s2));//Liga nopelnīja 5 DataStr
+				gradeRepo.save(new Grade(3, c1, s2));//Liga nopelnīja 5 DataStr
 				gradeRepo.save(new Grade(9, c3, s2));//Liga nopelnīja 9 ProgInz
 				gradeRepo.save(new Grade(6, c2, s3));//Baiba nopelnīja 6 DB
 				gradeRepo.save(new Grade(10, c3, s3));//Baiba nopelnīja 10 ProgInz
