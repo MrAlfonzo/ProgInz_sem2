@@ -18,7 +18,7 @@ public interface IGradeRepo extends CrudRepository<Grade, Integer>{
 	ArrayList<Grade> findByStudentIds(int id);
 
 	//pēc noklusejuma public abstract
-	@Query(nativeQuery = true, value = "select avg(grvalue) from grade_table where idc=?1;")// ?1 nozīmē, ka funkcijā pirmais arguments tiek ievietots šajā "?1" vietā
+	@Query(nativeQuery = true, value = "select avg(grvalue) from grade_table where idc=(?1);")// ?1 nozīmē, ka funkcijā pirmais arguments tiek ievietots šajā "?1" vietā
 	float calculateAVGGradeInCourseById(int id);
 
 }
