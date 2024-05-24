@@ -14,9 +14,9 @@ public interface ICourseRepo extends CrudRepository<Course, Integer>{
 
 	//pēc noklusejuma public abstract
 	//izpildīs so vaicājumu:select * from course_table where idp = <argumentā padoto>;
-	Course findByProfessorIdp(int id);
+	Course findByProfessorIdpe(int id);
 	//pēc noklusejuma public abstract
 	//izpildīs so vaicājumu: select * from course_table as T1 JOIN grade_table as T2 ON T1.idc=T2.idc WHERE T2.ids=<argumentā padoto>;
-	ArrayList<Course> findByGradesStudentIds(int id);
+	ArrayList<Course> findByGradesStudentIdpe(int id);
 
 }

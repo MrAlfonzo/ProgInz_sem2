@@ -29,15 +29,10 @@ import lombok.ToString;
 @Table(name = "ProfessorTable")
 @Entity
 public class Professor extends Person{
-	@Id
-	@Column(name = "Idp")
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Setter(value = AccessLevel.NONE)
-	private int idp;
-
 	
+	//ID nak no personas klases
 	
-	@NotNull
+//	@NotNull - janem nost jo ar SINGLE inheratance strategiju studenti un profesori bus viena tabula, kur studentiem nav degree
 	@Column(name="Degree")
 	private Degree degree;
 	
