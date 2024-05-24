@@ -42,10 +42,10 @@ public class CourseFilterController {
 		
 		try
 		{
-			Course selectedCourse = courseFilterService.selectCourseByProfessorId(id);
+			ArrayList<Course> selectedCourse = courseFilterService.selectCoursesByProfessorId(id);
 			model.addAttribute("mydata", selectedCourse);//padodam izfiltrētos kursus uz course-show-one-page.html lapu
 			model.addAttribute("msg", "Course filtered by professor");
-			return "course-show-one-page";//parādām pašu course-show-one-page.html lapu interneta pārlūkā
+			return "course-show-all-page";//parādām pašu course-show-all-page.html lapu interneta pārlūkā
 		}catch (Exception e) {
 			model.addAttribute("mydata", e.getMessage());//padod kļudas ziņu uz error-page.html lapu
 			return "error-page";//parādām pašu error-page.html lapu interneta pārlūkā

@@ -21,9 +21,15 @@
 			<td th:text="${mydata.getIdc()}"></td>
 			<td th:text="${mydata.getTitle()}"></td>
 			<td th:text="${mydata.getCreditpoints()}"></td>
-			<td th:text="${mydata.getProfessor().getName()}"></td>
-			<td th:text="${mydata.getProfessor().getSurname()}"></td>
-		</tr>
+				<td>
+				    <ul>
+				      <li th:each="tempP: ${tempC.getProfessors()}">
+				        <span th:text="${tempP.getName()}">Name</span>
+						<span th:text="${tempP.getSurname()}">Name</span>
+				      </li>
+				    </ul>
+				  </td>
+			</tr>
 		
 	</table>
 	
